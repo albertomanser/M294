@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Moon Phase Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Moon Phase Tracker</h1>
+    </header>
+    <div id="loginFormContainer">
+        <form id="loginForm" onsubmit="loginAndShowApp(); return false;">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button type="submit">Login</button>
+            <label id="wrongPasswordLabel" style="display: none; color: red;">Wrong username or password</label>
+        </form>
+        
+    </div>
+        <main id="mainContent" style="display: none;">
+            <div id="currentMoonPhase"></div>
+            <h2>Upcoming Moon Phases</h2>
+            <ul id="upcomingMoonPhases"></ul>
+        </main>
+
+        <select id="timezoneSelect" style="display: none">
+            <option value="Europe/Zurich">Switzerland (Europe/Zurich)</option>
+            <option value="America/New_York">New York (America/New_York)</option>
+            <option value="America/Los_Angeles">Los Angeles (America/Los_Angeles)</option>
+            <option value="America/Chicago">Chicago (America/Chicago)</option>
+            <option value="America/Denver">Denver (America/Denver)</option>
+            <option value="Europe/London">London (Europe/London)</option>
+            <option value="Europe/Berlin">Berlin (Europe/Berlin)</option>
+            <option value="Europe/Paris">Paris (Europe/Paris)</option>
+            <option value="Asia/Tokyo">Tokyo (Asia/Tokyo)</option>
+            <option value="Asia/Hong_Kong">Hong Kong (Asia/Hong_Kong)</option>
+            <option value="Asia/Dubai">Dubai (Asia/Dubai)</option>
+            <option value="Asia/Kolkata">India (Asia/Kolkata)</option>
+            <option value="Australia/Sydney">Sydney (Australia/Sydney)</option>
+            <option value="Pacific/Auckland">Auckland (Pacific/Auckland)</option>
+            </select>
+    <script src="moonphase.js"></script>
+    <script src="server.js"></script>
+</html>
